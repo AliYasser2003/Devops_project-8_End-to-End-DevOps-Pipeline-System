@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository: alyyasser10/devops-project-8
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 5000
+
+containerPort: 5000
