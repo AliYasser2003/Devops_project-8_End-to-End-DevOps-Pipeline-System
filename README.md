@@ -1,27 +1,23 @@
-# 🚀 DevOps Project 8 — End-to-End CI/CD Pipeline on AWS EKS
+# DevOps Project 8 — End-to-End CI/CD Pipeline on AWS EKS
 
----
 
-## 📌 Overview
+## Overview
 
-This project demonstrates a **complete DevOps lifecycle** by automating infrastructure provisioning, application build, containerization, and deployment to Kubernetes.
-
+This project demonstrates a complete DevOps lifecycle by automating infrastructure provisioning, application build, containerization,
+and deployment to Kubernetes.
 It simulates a real-world production pipeline where every step—from code push to deployment—is automated, reproducible, and scalable.
 
----
 
-## 🧠 Architecture
-
-```text
-Developer → GitHub → Jenkins Pipeline
-        → Docker Build → Docker Hub
-        → Helm → Kubernetes (EKS)
-        → Running Application
-```
+## Architecture
+![Architecture](Project-8_Screenshots/6_Architecture.png)
+Developer --> GitHub --> Jenkins Pipeline
+          --> Docker Build --> Docker Hub
+          --> Helm --> Kubernetes (EKS)
+          --> Running Application
 
 ---
 
-## 🔄 Deployment Flow
+## Deployment Flow
 
 ```text
 Code Push → Jenkins → Docker Build → Docker Hub → Helm Deploy → Kubernetes
@@ -29,7 +25,7 @@ Code Push → Jenkins → Docker Build → Docker Hub → Helm Deploy → Kubern
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Category         | Tools                       |
 | ---------------- | --------------------------- |
@@ -43,7 +39,7 @@ Code Push → Jenkins → Docker Build → Docker Hub → Helm Deploy → Kubern
 
 ---
 
-## 🧠 Responsibility Split
+## Responsibility Split
 
 | Layer      | Responsibility                   |
 | ---------- | -------------------------------- |
@@ -53,41 +49,8 @@ Code Push → Jenkins → Docker Build → Docker Hub → Helm Deploy → Kubern
 | Helm       | Kubernetes deployment templating |
 | Kubernetes | Application runtime              |
 
----
 
-## 📂 Project Structure
-
-```bash
-project-8/
-├── app/                 # Node.js application
-│   ├── Dockerfile
-│   ├── package.json
-│   └── src/
-│
-├── helm/
-│   └── my-app/
-│       ├── Chart.yaml
-│       ├── values.yaml
-│       └── templates/
-│           ├── deployment.yaml
-│           ├── service.yaml
-│           └── _helpers.tpl
-│
-├── jenkins/
-│   └── Jenkinsfile
-│
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── provider.tf
-│   └── outputs.tf
-│
-└── .gitignore
-```
-
----
-
-## 🔄 CI/CD Pipeline (Jenkins)
+## CI/CD Pipeline (Jenkins)
 
 The Jenkins pipeline automates the full workflow:
 
@@ -113,7 +76,7 @@ The Jenkins pipeline automates the full workflow:
 
 ---
 
-## 🐳 Docker
+## Docker
 
 ### Build Image
 
@@ -129,7 +92,7 @@ docker push alyyasser10/devops-project-8:latest
 
 ---
 
-## ☸️ Kubernetes (EKS)
+## Kubernetes (EKS)
 
 Cluster is provisioned using Terraform.
 
@@ -147,7 +110,7 @@ helm upgrade --install my-app ./helm/my-app
 
 ---
 
-## 📦 Helm Chart
+## Helm Chart
 
 Helm is used for Kubernetes deployment templating.
 
@@ -160,7 +123,7 @@ Helm is used for Kubernetes deployment templating.
 
 ---
 
-## 🏗️ Infrastructure (Terraform)
+## Infrastructure (Terraform)
 
 Terraform provisions:
 
@@ -180,7 +143,7 @@ Terraform provisions:
 
 ---
 
-## 🔐 Credentials Management
+## Credentials Management
 
 Sensitive data handled securely:
 
@@ -198,7 +161,7 @@ Sensitive data handled securely:
 
 ---
 
-## 📸 Project Screenshots
+## Project Screenshots
 
 ### 1️⃣ Terraform Cloud — Infrastructure Provisioning
 
@@ -222,7 +185,7 @@ Sensitive data handled securely:
 
 ---
 
-## 🎯 Key Achievements
+## Key Achievements
 
 * ✅ Built full CI/CD pipeline using Jenkins
 * ✅ Automated Docker image build and push
@@ -231,19 +194,7 @@ Sensitive data handled securely:
 * ✅ Integrated Terraform Cloud for remote execution
 * ✅ Achieved end-to-end DevOps workflow
 
----
-
-## 🚀 Future Improvements
-
-* 🔄 GitOps deployment using ArgoCD
-* 📊 Monitoring with Prometheus & Grafana
-* 🔐 Secrets management (AWS Secrets Manager / Vault)
-* ⚡ Blue-Green / Canary deployments
-* 🧪 Add automated testing stage
-
----
-
-## 🧠 Lessons Learned
+## Lessons Learned
 
 * Importance of Terraform state management
 * Handling IAM conflicts and resource duplication
@@ -253,11 +204,11 @@ Sensitive data handled securely:
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-**Ali Yasser**
+Ali Yasser
 
-DevOps Engineer (Aspiring)
+DevOps Engineer
 
 ---
 
