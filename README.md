@@ -113,8 +113,10 @@ Secrets are never stored in the repository.
 * EKS cluster nodes running and ready
 ![Kubernetes](Project-8_Screenshots/4_Kubernetes-Cluster(Nodes).png)
 
+
 ### 5️) Running Application
 * Application successfully deployed and running on Kubernetes
+  
 ![App](Project-8_Screenshots/5_Running-Application.png)
 
 
