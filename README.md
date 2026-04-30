@@ -36,7 +36,7 @@ The Jenkins pipeline automates the full workflow:
    * Pulls source code from GitHub
 
 2. **Build Image**
-   * Builds Docker image from application
+   * Builds Docker image from the application
 
 3. **Push Image**
    * Authenticates with Docker Hub
@@ -60,7 +60,7 @@ docker push alyyasser10/devops-project-8:latest
 
 
 ## Deploy via Helm
-I had old helm app and upgraded it in this project
+Existing Helm chart reused and updated for this deployment.
 ```bash
 helm upgrade --install my-app ./helm/my-app
 ```
@@ -76,8 +76,14 @@ Terraform provisions:
 * EKS Cluster
 * Node Group
 
+### Terraform Cloud is used for:
+* Remote execution
+* Remote state management
+* Secure variable handling
+
 
 ## Credentials Management
+Secrets are never stored in the repository.
 Sensitive data handled securely:
 
 ### Jenkins Credentials
@@ -92,7 +98,7 @@ Sensitive data handled securely:
 ## Project Screenshots
 
 ### 1️) Terraform Cloud — Infrastructure Provisioning
-* Provisioning AWS infrastructure (EKS, VPC, IAM) using Terraform Cloud
+* Provisioning AWS infrastructure (EKS, VPC, IAM)
 ![Terraform](Project-8_Screenshots/1_Terraform-Cloud(Infrastructure).png)
 
 ### 2️) Jenkins Pipeline — CI/CD Execution
