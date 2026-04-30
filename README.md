@@ -48,25 +48,25 @@ The Jenkins pipeline automates the full workflow:
 
 ## Docker
 
-### Build Image
+#### Build Image
 ```bash
 docker build -t alyyasser10/devops-project-8:latest .
 ```
 
-### Push Image
+#### Push Image
 ```bash
 docker push alyyasser10/devops-project-8:latest
 ```
 
 
-## Deploy via Helm
+### Deploy via Helm
 I had old helm app and upgraded it in this project
 ```bash
 helm upgrade --install my-app ./helm/my-app
 ```
 
 
-## Infrastructure (Terraform)
+### Infrastructure (Terraform)
 Terraform provisions:
 * VPC
 * Subnets
@@ -80,11 +80,11 @@ Terraform provisions:
 ## Credentials Management
 Sensitive data handled securely:
 
-#### Jenkins Credentials
+### Jenkins Credentials
 * `dockerhub-creds` → Docker Hub authentication
 * `kubeconfig` → Kubernetes cluster access
 
-#### Terraform Cloud Variables
+### Terraform Cloud Variables
 * `AWS_ACCESS_KEY_ID`
 * `AWS_SECRET_ACCESS_KEY`
 
