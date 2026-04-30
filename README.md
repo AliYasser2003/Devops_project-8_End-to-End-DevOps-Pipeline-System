@@ -83,14 +83,14 @@ Terraform provisions:
 
 
 ## Credentials Management
-Secrets are never stored in the repository.
 ### Sensitive data handled securely:
+Secrets are never stored in the repository.
 
-#### Jenkins Credentials
+### Jenkins Credentials
 * `dockerhub-creds` → Docker Hub authentication
 * `kubeconfig` → Kubernetes cluster access
 
-#### Terraform Cloud Variables
+### Terraform Cloud Variables
 * `AWS_ACCESS_KEY_ID`
 * `AWS_SECRET_ACCESS_KEY`
 
