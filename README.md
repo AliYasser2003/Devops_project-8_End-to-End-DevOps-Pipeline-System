@@ -83,8 +83,7 @@ Terraform provisions:
 
 
 ## Credentials Management
-Secrets are never stored in the repository.
-Sensitive data handled securely:
+Secrets are never stored in the repository & Sensitive data handled securely:
 
 ### Jenkins Credentials
 * `dockerhub-creds` → Docker Hub authentication
