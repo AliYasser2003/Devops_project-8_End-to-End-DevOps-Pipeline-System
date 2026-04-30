@@ -59,14 +59,14 @@ docker push alyyasser10/devops-project-8:latest
 ```
 
 
-### Deploy via Helm
+## Deploy via Helm
 I had old helm app and upgraded it in this project
 ```bash
 helm upgrade --install my-app ./helm/my-app
 ```
 
 
-### Infrastructure (Terraform)
+## Infrastructure (Terraform)
 Terraform provisions:
 * VPC
 * Subnets
